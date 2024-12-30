@@ -26,6 +26,8 @@
   #define HW_NAME			"VESC_BASIC_035"
 #elif defined(HW_BASIC_025) // 0.25 mOhm shunts
   #define HW_NAME			"VESC_BASIC_025"
+#elif defined(HW_BASIC_010) // 0.10 mOhm shunts
+  #define HW_NAME			"VESC_BASIC_010"
 #else
   #error "Must define hardware type"
 #endif
@@ -132,6 +134,8 @@
 #define CURRENT_SHUNT_RES		0.00035
 #elif defined(HW_BASIC_025)
 #define CURRENT_SHUNT_RES		0.00025
+#elif defined(HW_BASIC_010)
+#define CURRENT_SHUNT_RES		0.0001
 #else
 #define CURRENT_SHUNT_RES		0.0005
 #endif
@@ -268,6 +272,10 @@
 #define HW_LIM_CURRENT_IN		-150.0, 150.0
 #define HW_LIM_CURRENT_ABS		0.0, 250.0
 #elif defined(HW_BASIC_025)
+#define HW_LIM_CURRENT			-200.0, 200.0
+#define HW_LIM_CURRENT_IN		-150.0, 150.0
+#define HW_LIM_CURRENT_ABS		0.0, 300.0
+#elif defined(HW_BASIC_010)
 #define HW_LIM_CURRENT			-200.0, 200.0
 #define HW_LIM_CURRENT_IN		-150.0, 150.0
 #define HW_LIM_CURRENT_ABS		0.0, 300.0

@@ -53,26 +53,26 @@
 
 // Possible HW properties.
 
-/*
- * #define HW_HAS_DRV8301
- *
- * Use the DRV8301 driver
- *
- * Requires defining SPI pins for the driver:
- *
- * #define DRV8301_MOSI_GPIO	GPIOC
- * #define DRV8301_MOSI_PIN		12
- * #define DRV8301_MISO_GPIO	GPIOC
- * #define DRV8301_MISO_PIN		11
- * #define DRV8301_SCK_GPIO		GPIOC
- * #define DRV8301_SCK_PIN		10
- * #define DRV8301_CS_GPIO		GPIOC
- * #define DRV8301_CS_PIN		9
- *
- * Requires running
- * drv8301_init();
- * at the end of void hw_init_gpio(void)
- */
+
+ #define HW_HAS_DRV8301
+
+ //*Use the DRV8301 driver
+
+ //* Requires defining SPI pins for the driver:
+
+ #define DRV8301_MOSI_GPIO	GPIOC
+ #define DRV8301_MOSI_PIN		12
+ #define DRV8301_MISO_GPIO	GPIOC
+ #define DRV8301_MISO_PIN		11
+ #define DRV8301_SCK_GPIO		GPIOC
+ #define DRV8301_SCK_PIN		10
+ #define DRV8301_CS_GPIO		GPIOC
+ #define DRV8301_CS_PIN		9
+
+ //* Requires running
+ //* drv8301_init();
+ //* at the end of void hw_init_gpio(void)
+
 
 /*
  * #define HW_HAS_DRV8313
@@ -151,15 +151,15 @@
  * Use the internal RC clock instead of an external crystal.
  */
 
-/*
- * define HW_HAS_3_SHUNTS
- *
- * The hardware has 3 current sensors.
- */
 
+//#define HW_HAS_3_SHUNTS
+ //*
+ //* The hardware has 3 current sensors.
+
+
+
+//#define HW_HAS_PHASE_SHUNTS
 /*
- * #define HW_HAS_PHASE_SHUNTS
- *
  * The current sensors are in line with the motor phases,
  * which allows sampling in V0 and V7, and some extra filtering.
  */
